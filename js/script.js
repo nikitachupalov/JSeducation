@@ -1,40 +1,85 @@
 "use strict";
+// let a = 5,
+//     b = a;
 
-const arr = [7, 3, 4, 6, 8];
-arr.sort();
-console.log(arr);
+// b = b + 5;
+
+// console.log(b, a);
+
+// const obj = {
+//     a : 5,
+//     b : 1
+
+// };
+
+// const copy = obj;
+// copy.a = 10;
+// console.log(copy);
+// console.log(obj);
 
 
-function compare(a, b) {
-    return a - b;
+
+function copy(mainObj){
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj){
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
 }
-arr.pop();
 
-arr.push(10);
-console.log(arr);
+const numbers = {
+    a : 2,
+    b : 5,
+    c : {
+        d : 4,
+        e : 7
+    }
+};
 
-for(let i = 0;i < arr.length; i++){
-    console.log(arr[i]);
+const newNumbers = copy(numbers);
+
+newNumbers.a = 10;
+
+console.log(newNumbers);
+console.log(numbers);
+
+
+const add = {
+    d : 17,
+    e : 20
+};
+
+
+
+
+const clon = Object.assign({},add);
+
+clon.e = 22;
+
+// console.log(clon);
+// console.log(add);
+
+const oldArray = ['a', 'b', 'c'];
+
+const newArray = oldArray.slice();
+
+newArray[1] = 'd';
+
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo','rutube'],
+      blogs = ['wordpress' , 'livejournal'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+function log (a, b, c){
+    console.log(a);
 }
-
-for(let value of arr){
-    console.log(value);
-}
-
-
-arr.forEach(function (i, n, arr){
-    console.log(`${n}: ${i} in ${arr}`);
-});
-
-const str = prompt('', '');
-const products = str.split(', ');
-products.sort();
-console.log(products.join(';'));
-
-
-
-
-
 
 
 
