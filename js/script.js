@@ -1,17 +1,35 @@
 "use strict";
 
-function learnJS(lang, callback) {
-    console.log(`I learn ${lang}`);
-    callback();
+const arr = [7, 3, 4, 6, 8];
+arr.sort();
+console.log(arr);
+
+
+function compare(a, b) {
+    return a - b;
+}
+arr.pop();
+
+arr.push(10);
+console.log(arr);
+
+for(let i = 0;i < arr.length; i++){
+    console.log(arr[i]);
 }
 
-function done(){
-    console.log('Я прошел этот урок!');
+for(let value of arr){
+    console.log(value);
 }
 
 
-learnJS('JavaScript', done);
+arr.forEach(function (i, n, arr){
+    console.log(`${n}: ${i} in ${arr}`);
+});
 
+const str = prompt('', '');
+const products = str.split(', ');
+products.sort();
+console.log(products.join(';'));
 
 
 
