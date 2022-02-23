@@ -1,36 +1,22 @@
 'use strict';
 
+const box = document.getElementById('box');
+console.log(box);
 
-console.log(typeof(String(null)));
+// const head = document.getElementsByTagName('h1')[2];
 
-console.log(typeof(5 + ''));
+// console.log(head);
 
-const num = 5;
+const classs = document.getElementsByClassName('head');
 
-console.log('https://vk.com/catalog/' + num);
-
-
-const fontSize = 26+'px';
-
-
-console.log(typeof(Number('4')));
-
-console.log(typeof(+'5'));
+console.log(classs);
 
 
-// to boolean
+const head = document.querySelectorAll('.head');
 
-// 0,'',null,undefined,Nan; - false
+head.forEach(item => {
+    console.log(item);
+});
 
-let switcher = null;
-if(switcher){
-    console.log('Working...');
-}
-
-switcher = 1;
-
-if(switcher){
-    console.log('Working1...');
-}
-
-
+const oneHead = document.querySelector('.head');
+console.log(oneHead);
