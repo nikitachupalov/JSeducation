@@ -1,22 +1,25 @@
 'use strict';
 
 const box = document.getElementById('box');
-console.log(box);
 
-// const head = document.getElementsByTagName('h1')[2];
+// box.style.backgroundColor = 'blue';
+// box.style.fontSize = '100px';
 
-// console.log(head);
+// box.style.cssText = 'background-color: red';
 
-const classs = document.getElementsByClassName('head');
+// const div = document.createElement('div');
 
-console.log(classs);
+box.classList.add('black');
+
+document.body.append(box);
+
+// document.querySelector('wrapper').append();
+
+box.innerHTML = '<h1>Hello world</h1>';
+
+// box.textContent = 'Hello wolrd';
+
+box.insertAdjacentHTML('afterbegin', '<h2>Hello</h2>');
 
 
-const head = document.querySelectorAll('.head');
 
-head.forEach(item => {
-    console.log(item);
-});
-
-const oneHead = document.querySelector('.head');
-console.log(oneHead);
